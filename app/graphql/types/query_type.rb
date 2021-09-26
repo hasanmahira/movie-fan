@@ -36,7 +36,7 @@ module Types
 
 
     #User logout
-    field :logout, Boolean, null: false
+    field :logout, Boolean, null: false, description: "Logout a user"
 
     def logout 
       Session.where(id: context[:session_id]).destroy_all

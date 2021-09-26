@@ -1,6 +1,5 @@
-class Types::UserInputType < GraphQL::Schema::InputObject
-    graphql_name "UserInputType"
-    description "All teh attributes for creating User"
+class Mutations::CreateUser < GraphQL::Schema::Mutation 
+    null true
 
     argument :id, ID, required: false
     argument :user_name, String, {required: true, camelize: false }   
@@ -9,12 +8,9 @@ class Types::UserInputType < GraphQL::Schema::InputObject
     argument :email, String, {required: true, camelize: false }   
     argument :password_digest, String, {required: true, camelize: false }   
     argument :yob, String, {required: true, camelize: false }   
-end
 
-class Types::UserType < Types::BaseObject
-    description "A User"
-
-    field :id, ID, null: true
-    field :email, String, null: true
-    #field: is_superadmin, Boolean, null: true, camelize: false
+    def resolve(user_name:, first_name:, surname:, email:, password_digest:, yob:)
+        User.create user_name:user_name, first_name: first_name, surname:surname,
+        email:email, password_digest:password_digest, yob:yob
+    end
 end
