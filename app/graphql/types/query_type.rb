@@ -43,5 +43,30 @@ module Types
       true
     end
 
+
+    #List of Movies
+    field :movie_list, [Types::MovieType], null:true, description: "Listing of a all movies in database"
+
+    def movie_list
+      Movie.all
+    end
+
+    
+    #List of Movie Genres
+    field :movie_genre_list, [Types::MovieGenreType], null:true, description: "Listing of a all movie genres in database"
+
+    def movie_genre_list
+      MovieGenre.all
+    end
+
+
+    
+    #List of Stars
+    field :star_list, [Types::StarType], null:true, description: "Listing of a all actors and actresses in database"
+
+    def star_list
+      Star.all
+    end
+
   end
 end

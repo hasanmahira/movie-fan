@@ -23,67 +23,67 @@
   
     movie_genres = MovieGenre.create([
       {
-        "genres": "Drama"
+        "name": "Drama"
       },
       {
-        "genres": "Crime"
+        "name": "Crime"
       },
       {
-        "genres": "Action"
+        "name": "Action"
       },
       {
-        "genres": "Biography"
+        "name": "Biography"
       },
       {
-        "genres": "Western"
+        "name": "Western"
       },
       {
-        "genres": "Comedy"
+        "name": "Comedy"
       },
       {
-        "genres": "Adventure"
+        "name": "Adventure"
       },
       {
-        "genres": "Animation"
+        "name": "Animation"
       },
       {
-        "genres": "Horror"
+        "name": "Horror"
       },
       {
-        "genres": "Mystery"
+        "name": "Mystery"
       },
       {
-        "genres": "Romance"
+        "name": "Romance"
       },
       {
-        "genres": "Sci-Fi"
+        "name": "Sci-Fi"
       },
       {
-        "genres": "War"
+        "name": "War"
       },
       {
-        "genres": "Family"
+        "name": "Family"
       },
       {
-        "genres": "Music"
+        "name": "Music"
       },
       {
-        "genres": "Thriller"
+        "name": "Thriller"
       },
       {
-        "genres": "Musical"
+        "name": "Musical"
       },
       {
-        "genres": "Film-Noir"
+        "name": "Film-Noir"
       },
       {
-        "genres": "Fantasy"
+        "name": "Fantasy"
       },
       {
-        "genres": "History"
+        "name": "History"
       },
       {
-        "genres": "Sport"
+        "name": "Sport"
       }
     ])
 
@@ -18092,7 +18092,7 @@
     ])
 
 
-    actors = Actor.create([
+    stars = Star.create([
       {
         "name": "Tim Robbins",
         "code": "Tim-Robbins"
