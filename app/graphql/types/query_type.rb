@@ -45,10 +45,15 @@ module Types
 
 
     #List of Movies
-    field :movie_list, [Types::MovieType], null:true, description: "Listing of a all movies in database"
+    field :movie_list, [Types::MovieType], null:true, description: "Listing of a all movies in database" do
+      #argument :max_result_count, Int, required: true
+      argument :page_number, Int, required: true
+      argument :page_size, Int, required: true
+    end
 
-    def movie_list
-      Movie.all
+    def movie_list(page_number:, page_size:)
+      skip_count = page_number * page_size
+      Movie.all.offset(skip_count).limit(page_size)
     end
 
     
