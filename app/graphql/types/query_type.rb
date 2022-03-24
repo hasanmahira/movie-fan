@@ -67,10 +67,14 @@ module Types
 
     
     #List of Stars
-    field :star_list, [Types::StarType], null:true, description: "Listing of a all actors and actresses in database"
+    field :star_list, [Types::StarType], null:true, description: "Listing of a all actors and actresses in database" do
+      argument :page_number, Int, required: true
+      argument :page_size, Int, required: true
+    end
 
-    def star_list
-      Star.all
+    def star_list(page_number:, page_size:)
+      skip_count = page_number * page_size
+      Star.all.offset(skip_count).limit(page_size)
     end
 
   end
