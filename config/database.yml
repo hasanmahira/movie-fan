@@ -29,10 +29,10 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  username: postgres
+  username: bfppooltkoajea
 
   # The password associated with the postgres role (username).
-  password: '123'
+  password: '0f00b423e0bb6182060c912286767ecd6145d4e0db13b00eb3c666ce2161b1a5'
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: movie_fan_test
+  database: dbcbhdhglpl0lp
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: movie_fan_production
-  username: movie_fan
-  password: <%= ENV['MOVIE_FAN_DATABASE_PASSWORD'] %>
+  database: dbcbhdhglpl0lp
+  username: bfppooltkoajea
+  password: 0f00b423e0bb6182060c912286767ecd6145d4e0db13b00eb3c666ce2161b1a5
